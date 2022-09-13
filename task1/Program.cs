@@ -60,7 +60,7 @@ int[,] SortRowArray(int[,] array)
         {
             sortArray[j] = array[i, j];
         }
-        Array.Sort(sortArray);
+        sortArray = sortArray.OrderByDescending(x => x).ToArray();
         array = InsertSortRow(array, i, sortArray);
     }
     return array;
