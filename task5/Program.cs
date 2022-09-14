@@ -41,7 +41,6 @@ int[,] FillArray(int[,] array)
                     jCursor = j;
                 }
                 iCursor++;
-                direction++;
                 break;
             case 1:
                 for (int i = iCursor; i < array.GetLength(0) - fillRow; i++)
@@ -51,7 +50,6 @@ int[,] FillArray(int[,] array)
                     iCursor = i;
                 }
                 jCursor--;
-                direction++;
                 fillRow++;
                 break;
             case 2:
@@ -62,7 +60,6 @@ int[,] FillArray(int[,] array)
                     jCursor = j;
                 }
                 iCursor--;
-                direction++;
                 break;
             case 3:
                 for (int i = iCursor; i >= fillRow; i--)
@@ -72,10 +69,10 @@ int[,] FillArray(int[,] array)
                     iCursor = i;
                 }
                 jCursor++;
-                direction++;
                 fillColumn++;
                 break;
         }
+        direction++;
     }
     return array;
 }
